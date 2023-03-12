@@ -44,12 +44,15 @@ body {
   letter-spacing: 0.02em;
 }
 
+.section {
+  padding: 120px 0;
+}
+
 .container {
-  width: 1158px;
+  max-width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 2px solid red;
 }
 
 .list {
@@ -153,7 +156,6 @@ body {
 
 .main-title {
   max-width: 496px;
-  height: 120px;
   font-size: 56px;
   line-height: 1.07;
   text-align: center;
@@ -190,9 +192,8 @@ body {
 
 /**------------ methods -----------------**/
 
-.methods-container {
-  padding-top: 120px;
-  padding-bottom: 120px;
+.methods {
+  padding-bottom: 0;
 }
 
 .methods-title {
@@ -215,10 +216,6 @@ body {
 
 /**--------------- examples ------------**/
 
-.examples-container {
-  padding-bottom: 120px;
-}
-
 .examples-top-title {
   font-size: 36px;
   line-height: 1.11;
@@ -230,6 +227,7 @@ body {
 
 .examples-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
 }
 
@@ -244,8 +242,7 @@ body {
 }
 
 .team-container {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 32px 16px;
 }
 
 .team-top-title {
@@ -259,6 +256,7 @@ body {
 
 .team-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
 }
 
@@ -268,7 +266,6 @@ body {
   line-height: 1.2;
   text-align: center;
   color: var(--navy-blue-dark);
-  padding: 32px 16px 0 16px;
   margin-bottom: 8px;
 }
 
@@ -276,7 +273,6 @@ body {
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
-  padding: 0px 16px 32px 16px;
 }
 
 .team-item {
@@ -308,7 +304,7 @@ body {
 
 /**--------------- Portfolio.html ---------------**/
 
-.project-container {
+.project-box {
   padding-top: 96px;
   padding-bottom: 120px;
 }
@@ -323,6 +319,7 @@ body {
 
 .button-item {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -359,14 +356,17 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 48px 24px;
-  flex-basis: calc((100% - 48px) / 3);
 }
 
-.project-container-list {
+.project-container {
   padding: 32px 16px;
   border-left: 1px solid #e7e9fc;
   border-right: 1px solid #e7e9fc;
   border-bottom: 1px solid #e7e9fc;
+}
+
+.project-item {
+  flex-basis: calc((100% - 48px) / 3);
 }
 
 .project-title {
