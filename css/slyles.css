@@ -207,6 +207,7 @@ body {
 .methods-list {
   display: flex;
   gap: 24px;
+  flex-basis: calc((100% - 48px) / 3);
 }
 
 .methods-text {
