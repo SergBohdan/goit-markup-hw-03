@@ -147,6 +147,7 @@ body {
 /**--------------- hero ---------------**/
 
 .hero {
+  max-width: 1440px;
   background-color: var(--grey-hero-background);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -156,6 +157,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin: 0 auto;
 }
 
 .hero-container {
@@ -289,6 +291,25 @@ body {
   flex-basis: calc((100% - 72px) / 4);
   background-color: var(--text-white-background);
 }
+
+.team-soc-list {
+  display: flex;
+  justify-content: center;
+}
+
+.team-soc-item {
+  /* width: 40px;
+  height: 40px; */
+}
+
+.team-soc-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: tomato;
+  display: block;
+}
+
 /**------------- footer ---------------**/
 
 .footer {
