@@ -13,9 +13,6 @@
   --grey-hero-background: #2e2f42;
   --text-white-background: #ffffff;
 }
-svg:not(:root) {
-  overflow: visible;
-}
 
 img {
   width: 100%;
@@ -362,32 +359,38 @@ body {
 
 .customers-list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 24px;
-  flex-basis: calc((100% - 120px) / 6);
 }
 
 .customers-item {
-  width: 168px;
-  height: 88px;
-  border: 1px solid var(--light-slate-subtle-text);
-  border-radius: 4px;
-  display: block;
+  flex-basis: calc((100% - 120px) / 6);
 }
 
 .customers-link {
-  width: 104px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 32px;
   display: block;
-  color: var(--light-slate-subtle-text);
+  width: 168px;
+  height: 88px;
+  border: 1px solid var(--light-slate);
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customer-link:is(:hover, :focus) {
+  outline: none;
+  border: 1px solid var(--pressed-state);
 }
 
 .customers-icon {
-  fill: currentColor;
+  width: 104px;
+  height: 56px;
+  margin: 16px 32px;
+  fill: var(--light-slate);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customer-link:is(:hover, :focus) .customer-img {
+  fill: var(--light-slate);
 }
 
 /**------------- footer ---------------**/
