@@ -13,6 +13,9 @@
   --grey-hero-background: #2e2f42;
   --text-white-background: #ffffff;
 }
+svg:not(:root) {
+  overflow: visible;
+}
 
 img {
   width: 100%;
@@ -367,24 +370,24 @@ body {
 .customers-item {
   width: 168px;
   height: 88px;
-  border: 1px solid #8e8f99;
+  border: 1px solid var(--light-slate-subtle-text);
   border-radius: 4px;
-  margin: 0;
-  padding: 0;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
+  display: block;
 }
 
 .customers-link {
+  width: 104px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 16px 32px;
   display: block;
+  color: var(--light-slate-subtle-text);
 }
 
 .customers-icon {
-  fill: #afb1b8;
+  fill: currentColor;
 }
 
 /**------------- footer ---------------**/
