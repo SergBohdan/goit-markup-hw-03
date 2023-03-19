@@ -69,7 +69,7 @@ body {
 .page-header {
   padding-top: 24px;
   padding-bottom: 24px;
-  border-bottom: 1px solid #e7e9fc;
+  border-bottom: 1px solid var(--cornflower-accent);
 }
 
 .header-container {
@@ -218,7 +218,13 @@ body {
 
 .advantage-list {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 24px;
+}
+
+.advantage-soc-item {
+  display: block;
   flex-basis: calc((100% - 72px) / 4);
 }
 
@@ -228,18 +234,11 @@ body {
 }
 
 .advantage-soc-link {
-  background-color: #f4f4fd;
+  background-color: var(--cloud-light);
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 4px;
-}
-
-.advantage-soc-link:hover,
-.advantage-soc-link:focus {
-  border: 1px solid #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .advantage-soc-icon {
@@ -313,6 +312,9 @@ body {
 .team-item {
   flex-basis: calc((100% - 72px) / 4);
   background-color: var(--text-white-background);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-soc-list {
@@ -357,15 +359,64 @@ body {
   color: var(--navy-blue-dark);
 }
 
+.customers-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.customers-item {
+  width: 168px;
+  height: 88px;
+  display: inline-block;
+  flex-basis: calc((100% - 120px) / 6);
+  box-sizing: border-box;
+  border: 1px solid var(--light-slate-subtle-text);
+  border-radius: 4px;
+  background-color: var(--text-white-background);
+}
+
+.customers-link {
+  display: inline-block;
+  padding: 16px 32px;
+}
+
+.customers-icon {
+  fill: var(--light-slate-subtle-text);
+}
+
+.customers-item:hover,
+.customers-item:focus {
+  color: var(--ocean-pressed-state);
+  border-color: var(--ocean-pressed-state);
+}
+
+.customers-item:hover .customers-icon,
+.customers-item:focus .customers-icon {
+  fill: var(--ocean-pressed-state);
+}
+
 /**------------- footer ---------------**/
 
 .footer {
+  max-width: 1440px;
   background-color: var(--grey-hero-background);
+  margin: 0 auto;
+}
+
+.footer-box {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .footer-container {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  display: flex;
+}
+
+.logo-container {
+  max-width: 264px;
+  margin-right: 120px;
 }
 
 .footer-logo-color {
@@ -373,11 +424,54 @@ body {
 }
 
 .footer-text {
-  max-width: 264px;
   font-size: 16px;
   line-height: 1.5;
   color: var(--cornflower-accent);
   margin-top: 16px;
+}
+
+.soc-container {
+  max-width: 208px;
+}
+
+.footer-soc-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-white-background);
+  margin-bottom: 16px;
+}
+
+.footer-soc-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-soc-item {
+  width: 40px;
+  height: 40px;
+  flex-basis: calc((100% - 48px) / 4);
+}
+
+.footer-soc-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--slate-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-soc-icon {
+  fill: var(--cloud-light);
+}
+
+.footer-soc-link:hover,
+.footer-soc-link:focus {
+  background-color: var(--green-success);
 }
 
 /**--------------- Portfolio.html ---------------**/
@@ -412,7 +506,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 12px 24px;
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--cornflower-accent);
   border-radius: 4px;
 }
 
@@ -438,13 +532,19 @@ body {
 
 .project-container {
   padding: 32px 16px;
-  border-left: 1px solid #e7e9fc;
-  border-right: 1px solid #e7e9fc;
-  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid var(--cornflower-accent);
+  border-right: 1px solid var(--cornflower-accent);
+  border-bottom: 1px solid var(--cornflower-accent);
 }
 
 .project-item {
   flex-basis: calc((100% - 48px) / 3);
+}
+
+.project-item:hover,
+.project-item:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .project-title {
